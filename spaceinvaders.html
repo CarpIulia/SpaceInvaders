@@ -6,6 +6,7 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="alienModel" src="obj/alien.obj"></a-asset-item>
+        <a-asset-item id="navaModel" src="obj/nava.obj"></a-asset-item>
       </a-assets>
 
       <a-sky color="black"></a-sky>
@@ -23,6 +24,11 @@
       color="darkgreen"
       rotation="0 0 0"
       animation="property: rotation; to: 0 10 0; loop: true; dur: 10000"></a-obj-model>
+
+      <a-obj-model
+      src="#navaModel"
+      position="0 1 -2"
+      color = "red"></a-obj-model>
 
       <a-torus
       color="gray"
