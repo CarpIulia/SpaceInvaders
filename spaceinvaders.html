@@ -3,6 +3,7 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
+
     <script>
       AFRAME.registerComponent('change-alien-position', {
       tick: function() {
@@ -12,29 +13,27 @@
 
         for(var i=0; i<aliens.length; i++) {
           var pos = aliens[i].getAttribute('position');
-          aliens[i].setAttribute('position',{x: pos.x + 0.005, y: pos.y, z: pos.z});
           if (pos.x>1.25){
-            pos.x=-0.75;
+            pos.x=-1.25;
             pos.y=pos.y-0.35;
           }
+          aliens[i].setAttribute('position',{x: pos.x + 0.005, y: pos.y, z: pos.z});
         }
       }
     });
     </script>
+
     <script>
       AFRAME.registerComponent('camera-rotation',{
       tick: function() {
         var scene = document.querySelector('a-scene');
         var shipEl=scene.querySelector('#ship');
-        var fireButtonEl=scene.querySelector('#fireButton');
 
         var pos=shipEl.getAttribute('position');
-        if (-this.el.object3D.rotation.y*2>-0.75 && -this.el.object3D.rotation.y*1.4<1.5)
+        if (-this.el.object3D.rotation.y*2>-1.25 && -this.el.object3D.rotation.y*1.4<1.5)
         {
           shipEl.setAttribute('position',{x: -this.el.object3D.rotation.y*1.4, y: pos.y, z: pos.z});
-          fireButtonEl.setAttribute('position',{x: -this.el.object3D.rotation.y*1.4-0.26, y: pos.y+0.25, z: pos.z-0.25});
         }
-
       }
     });
     </script>
@@ -143,13 +142,6 @@
       src="#shipModel"
       position="0 0.75 -2"
       color = "red"></a-obj-model>
-
-      <a-text
-      id="fireButton"
-      value="FIRE"
-      geometry="primitive: plane, color: grey"
-      color="purple"></a-text>
-
 
       <a-torus
       color="gray"
