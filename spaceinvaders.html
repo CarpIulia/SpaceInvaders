@@ -6,7 +6,7 @@
     <a-scene>
       <a-assets>
         <a-asset-item id="alienModel" src="obj/alien.obj"></a-asset-item>
-        <a-asset-item id="navaModel" src="obj/nava.obj"></a-asset-item>
+        <a-asset-item id="shipModel" src="obj/ship.obj"></a-asset-item>
       </a-assets>
 
       <a-sky color="black"></a-sky>
@@ -19,20 +19,110 @@
       </a-camera>
 
       <a-obj-model
+      id="alien"
       src="#alienModel"
-      position ="0 1.5 -2"
+      position ="-0.75 1.5 -2"
       color="darkgreen"
       rotation="0 0 0"
-      animation="property: rotation; to: 0 10 0; loop: true; dur: 10000"></a-obj-model>
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
 
       <a-obj-model
-      src="#navaModel"
-      position="0 1 -2"
+      id="alien"
+      src="#alienModel"
+      position ="-0.25 1.5 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.25 1.5 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.75 1.5 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="-0.75 1.85 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="-0.25 1.85 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.25 1.85 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.75 1.85 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="-0.75 2.2 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="-0.25 2.2 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.25 2.2 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="alien"
+      src="#alienModel"
+      position ="0.75 2.2 -2"
+      color="darkgreen"
+      rotation="0 0 0"
+      <!--<animation="property: rotation; to: 0 10 0; loop: true; dur: 10000">--></a-obj-model>
+
+      <a-obj-model
+      id="ship"
+      src="#shipModel"
+      position="0 0.75 -2"
       color = "red"></a-obj-model>
 
       <a-torus
       color="gray"
-      position ="0 1 0"
+      position ="0 0.25 0"
       radius="2"
       radius-tubular="0.01"
       rotation="90 0 0"></a-torus>
