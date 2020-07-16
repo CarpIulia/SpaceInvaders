@@ -3,7 +3,19 @@
     <script src="https://aframe.io/releases/1.0.4/aframe.min.js"></script>
   </head>
   <body>
-    <a-scene>
+    <script>
+      AFRAME.registerComponent('change-alien-position', {
+      tick: function() {
+        var scene = document.querySelector('a-scene');
+        var aliens=scene.querySelectorAll('#alien');
+        for(var i=0; i<aliens.length; i++) {
+          var pos = aliens[i].getAttribute('position');
+          aliens[i].setAttribute('position',{x: 2, y: 2, z: -2});
+        }
+      }
+    });
+    </script>
+    <a-scene change-alien-position>
       <a-assets>
         <a-asset-item id="alienModel" src="obj/alien.obj"></a-asset-item>
         <a-asset-item id="shipModel" src="obj/ship.obj"></a-asset-item>
