@@ -4,20 +4,21 @@
   </head>
   <body>
 
-    <script src="js/change-alien-position.js"></script>
-
+    <script src="js/tick-game.js"></script>
     <script src="js/camera-ship-chase.js"></script>
+    <script src="js/bullet-trigger.js"></script>
 
-    <a-scene change-alien-position>
+    <a-scene tick-game>
       <a-assets>
         <a-asset-item id="alienModel" src="obj/alien.obj"></a-asset-item>
         <a-asset-item id="shipModel" src="obj/ship.obj"></a-asset-item>
+        <a-asset-item id="bulletModel" src="obj/bullet.obj"></a-asset-item>
       </a-assets>
 
       <a-sky color="black"></a-sky>
 
       <a-camera position="0 1.75 0" camera-ship-chase>
-        <a-entity cursor="fuse: true; fuseTimeout: 2000"
+        <a-entity cursor="fuse: true; fuseTimeout: 500"
           position="0 0 -1"
           geometry="primitive: ring; radiusInner: 0.025; radiusOuter: 0.03"
           material="color: #49FF00; shader: flat">
@@ -28,6 +29,7 @@
       src="#alienModel"
       position ="-0.75 2 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -35,6 +37,7 @@
       src="#alienModel"
       position ="-0.25 2 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -42,6 +45,7 @@
       src="#alienModel"
       position ="0.25 2 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -49,6 +53,7 @@
       src="#alienModel"
       position ="0.75 2 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -56,6 +61,7 @@
       src="#alienModel"
       position ="-0.75 2.35 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -63,6 +69,7 @@
       src="#alienModel"
       position ="-0.25 2.35 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -70,6 +77,7 @@
       src="#alienModel"
       position ="0.25 2.35 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -77,6 +85,7 @@
       src="#alienModel"
       position ="0.75 2.35 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -84,6 +93,7 @@
       src="#alienModel"
       position ="-0.75 2.7 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -91,6 +101,7 @@
       src="#alienModel"
       position ="-0.25 2.7 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -98,6 +109,7 @@
       src="#alienModel"
       position ="0.25 2.7 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
@@ -105,6 +117,7 @@
       src="#alienModel"
       position ="0.75 2.7 -2"
       color="darkgreen"
+      animation="startEvents: click; property: bullet-trigger"
       ></a-obj-model>
 
       <a-obj-model
